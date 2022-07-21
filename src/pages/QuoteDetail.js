@@ -14,17 +14,17 @@ const QuoteDetail = () => {
 
     const quote = DUMMY_QUOTES.find(quote => quote.id === params.quoteId);
 
-    if (!quote){
+    if (!quote) {
         return <p>No quote found</p>
     }
 
     return (
-    <Fragment>
-        <HighlightedQuote text={quote.text} author={quote.author}/>
-        <Route path={`/quotes/${params.quoteId}/comments`}>
-            <Comments/>
-        </Route>
-    </Fragment>
+        <Fragment>
+            <HighlightedQuote text={quote.text} author={quote.author}/>
+            <Route path={`/quotes/${params.quoteId}/comments`}>
+                <Comments/>
+            </Route>
+        </Fragment>
     );
 };
 
